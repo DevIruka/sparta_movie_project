@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+
+* {
+    font-family: "Do Hyeon", serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #202124;
+}
+
+.header {
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 230px;
+    width: 100%;
+}
+
+.title {
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 10px;
+}
+
+.title:hover {
+    cursor: pointer;
+}
+
+.searchBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+}
+
+.searchInput {
+    display: flex;
+    height: 40px;
+    width: 60%;
+    border: solid 3px;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.searchBtn {
+    display: flex;
+    height: 50px;
+    width: 90px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border: solid 3px;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.searchBtn:hover {
+    cursor: pointer;
+    background-color: #f5a9a9;
+}
+
+.fixBtn {
+    display: flex;
+    height: 50px;
+    width: 90px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: wheat;
+    border: solid 3px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.fixBtn:hover {
+    cursor: pointer;
+    background-color: #FBFBEF;
+}
+
+.checkBookmarkBtn {
+    display: flex;
+    height: 50px;
+    width: 120px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: wheat;
+    border: solid 3px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.checkBookmarkBtn:hover {
+    cursor: pointer;
+    background-color: #FBFBEF;
+}
+
+main {
+    width: 100%;
+    max-width: 2400px;
+    min-height: 100vh;
+}
+
+.modalContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    max-width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#modalContainerInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    text-align: center;
+    height: 80vh;
+    width: 720px;
+    border-radius: 10px;
+}
+
+.modalCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 90%;
+    width: 720px;
+    margin: 30px;
+}
+
+.closeBtn {
+    display: flex;
+    position: relative;
+    top: 40px;
+    left: 320px;
+    min-height: 40px;
+    min-width: 40px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border: solid 3px red;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.closeBtn:hover {
+    cursor: pointer;
+    background-color: #f5a9a9;
+    border: solid 3px #f5a9a9;
+}
+
+.modalcloseBtn {
+    display: flex;
+    position: relative;
+    top: 30px;
+    left: 556px;
+    min-height: 40px;
+    min-width: 40px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border: solid 3px red;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.modalcloseBtn:hover {
+    cursor: pointer;
+    background-color: #f5a9a9;
+    border: solid 3px #f5a9a9;
+}
+
+.addBookmarkBtn {
+    display: flex;
+    position: relative;
+    bottom: 100px;
+    left: 250px;
+    min-height: 40px;
+    min-width: 150px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    border: solid 3px black;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.addBookmarkBtn:hover {
+    cursor: pointer;
+    background-color: #a4a4a4;
+    border: solid 3px #a4a4a4;
+    cursor: pointer;
+}
+
+.cardWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 2400px;
+    min-height: 100%;
+}
+
+.tempcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 450px;
+    width: 300px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.tempcard:hover {
+    cursor: pointer;
+}
+
+.modalImage {
+    width: 70%;
+    height: 70%;
+    padding: 30px;
+}
+
+.contentWrapper {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.movieTitle {
+    font-size: 28px;
+    margin: 5px;
+}
+
+.modalmovietitle {
+    font-size: 28px;
+    margin: 5px;
+}
+
+.movieScore {
+    font-size: 18px;
+    margin: 5px;
+}
+
+.movieIntroduce {
+    font-size: 26px;
+    text-align: left;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.movieId {
+    display: none;
+}
+
+.movieDetails {
+    display: none;
+}
+
+.bookmarkModalContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    max-width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#bookmarkModalContainerWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #202124;
+    text-align: center;
+    height: 80vh;
+    width: 1200px;
+    border-radius: 10px;
+}
+
+#bookmarkModalContainerInner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #202124;
+    text-align: center;
+    height: 80vh;
+    width: 1200px;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+#bookmarkModalContainerInner::-webkit-scrollbar {
+    display: none;
+}
+
+.deleteBtn {
+    display: flex;
+    position: relative;
+    min-height: 40px;
+    min-width: 80px;
+    bottom: 15px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    border: solid 3px black;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.deleteBtn:hover {
+    background-color: #a4a4a4;
+    border: solid 3px #a4a4a4;
+    cursor: pointer;
+}
+
+.modalcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 490px;
+    width: 300px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.modalcard:hover {
+    cursor: pointer;
+}
+
+.noMessage {
+    color: white;
+    font-size: 60px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    height: (footer높이);
+    position: relative;
+    transform: translateY(-100%);
+}

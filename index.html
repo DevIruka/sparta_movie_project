@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>민준이의 영화 사이트</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="reset.css" />
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="title" id="title">
+                <img src="img/mingflix.png" alt="밍플릭스 로고" />
+            </h1>
+            <form class="searchBox" id="searchBox">
+                <input
+                    class="searchInput"
+                    type="text"
+                    placeholder="영화를 입력해주세요."
+                />
+                <button class="searchBtn" type="submit">검색</button>
+                <button class="fixBtn" type="button" id="fixBtn">
+                    검색 초기화
+                </button>
+            </form>
+            <button class="checkBookmarkBtn" id="checkBookmarkBtn">
+                북마크 확인하기
+            </button>
+        </header>
+        <main>
+            <div class="cardWrapper"></div>
+
+            <!-- 모달의 코드입니다.  -->
+
+            <div class="modalContainer" id="modalContainer">
+                <div id="modalContainerInner"></div>
+            </div>
+
+            <!-- 북마크 모달의 코드입니다. -->
+            <div class="bookmarkModalContainer">
+                <div id="bookmarkModalContainerWrapper">
+                    <button class="modalcloseBtn">
+                        <img
+                            src="img/x icon.png"
+                            alt="닫기 버튼입니다."
+                            style="width: 20px; height: 20px"
+                        />
+                    </button>
+                    <div id="bookmarkModalContainerInner"></div>
+                </div>
+            </div>
+        </main>
+        <footer>뿌터</footer>
+        <script src="script.js" type="module"></script>
+    </body>
+</html>
