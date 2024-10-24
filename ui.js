@@ -85,7 +85,7 @@ const modalAdd = function (e) { // 모달에다가 데이터를 추가해주는 
             <li class="movieTitle">${targetedCardTitle}</li>
             <li class="movieScore">${targetScore}</li>
         </ul>
-        </div><button class="addBookmarkBtn">임시 북마크 버튼</button>`;
+        </div><button class="addBookmarkBtn">북마크 버튼</button>`;
             modalContainerInner.innerHTML += modalCardHtml;
             // 여기까지 아예 '영화 소개가 없을 때' 출력
         } else if (targetOverview.length > 300) {
@@ -205,7 +205,7 @@ const bookmarkmodalAdd = function (e) {
             <li class="movieTitle">${targetedCardTitle}</li>
             <li class="movieScore">${targetScore}</li>
         </ul>
-        </div><button class="addBookmarkBtn">임시 북마크 버튼</button>`;
+        </div><button class="addBookmarkBtn">북마크 버튼</button>`;
             modalContainerInner.innerHTML += modalCardHtml;
         } else {
             const modalCardHtml = `<button class="closeBtn">
